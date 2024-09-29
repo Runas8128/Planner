@@ -1,0 +1,194 @@
+/* =======================================================
+                        Page wrap
+   ======================================================= */
+
+#timer-page-wrap {
+    position: absolute;
+    /* TODO: Un-comment below */
+    left: -30vw;
+    width: 100vw;
+    height: 100vh;
+    transition: 1s ease;
+}
+
+/* =======================================================
+                        Select Section
+   ======================================================= */
+
+#select-wrap {
+    position: absolute;
+    width: 30vw;
+    height: 100vh;
+    background-color: #FCECFF;
+}
+
+button.select {
+    background-color: #FCECFF;
+    border: 0;
+    font-size: 32px;
+    font-family: "Jua", system-ui;
+    width: 100%;
+    height: 8.5vw;
+}
+
+button.select-obj {
+    background-color: #FCECFF;
+    font-family: "Jua", system-ui;
+    position: relative;
+    top: -3em;
+    border: 5px solid;
+    border-radius: 12px;
+    margin: 3em auto;
+    padding: 0 6vw;
+    width: 23.5vw;
+    height: 10vh;
+    display: flex;
+    gap: 0vw;
+}
+
+span.select-text {
+    font-size: 32px;
+    margin: auto;
+}
+
+span.select-min {
+    font-size: 24px;
+    margin: auto;
+}
+
+#select {
+    height: calc(100vh - 8.5vw);
+    overflow-y: auto;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+#select::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+/* =======================================================
+                        Timer Section
+   ======================================================= */
+
+#timer-wrap {
+    position: absolute;
+    left: 30vw;
+    width: 70vw;
+    height: 100vh;
+    display: flex;
+}
+
+#timer-hover {
+    position: absolute;
+    width: 70vw;
+    height: 100vw;
+    opacity: 0%;
+    transition: 1s ease;
+    background-color: #FFECF9;
+    border: 0;
+}
+
+#time {
+    margin: auto;
+    width: 35vw;
+    height: 15vw;
+    border-radius: 50%;
+    border: 10px solid;
+    opacity: 100%;
+    transition: 1s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10vw 0;
+}
+
+#time > span {
+    font-family: "Jua", system-ui;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+}
+
+#time > span#time-text {
+    font-size: 70px;
+    letter-spacing: 0.5em;
+    text-indent: 0.5em;
+}
+
+#time > span#time-prog {
+    font-size: 24px;
+}
+
+#time.running {
+    background: conic-gradient(from 0deg, #FFB9E9AF var(--ratio), transparent 1deg);
+}
+
+/* =======================================================
+                        Lab Section
+   ======================================================= */
+
+#lab-wrap {
+    position: absolute;
+    left: 100vw;
+    width: 30vw;
+    height: 100vw;
+    background-color: #FCECFF;
+}
+
+#lab-item-wrap {
+    background-color: #FFD3DC;
+    height: calc(100vh - 8.5vw);
+    overflow-y: auto;
+}
+
+#lab-item-wrap::-webkit-scrollbar {
+    width: 20px;
+}
+#lab-item-wrap::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+
+#lab-item-wrap > p {
+    position: relative;
+    margin: 0.5em auto -0.3em;
+    width: calc(100% - 2em);
+    font-size: 24px;
+    font-family: "Jua", system-ui;
+    text-align: center;
+}
+
+.lab-obj {
+    position: relative;
+    margin: 1em auto;
+    width: calc(100% - 2em);
+    height: 19vh;
+    font-family: "Jua", system-ui;
+    background-color: #FFECF0;
+}
+
+span.lab-time {
+    position: absolute;
+    top: 1.5vw;
+    left: 5vw;
+    font-size: 32px;
+}
+
+span.lab-len {
+    position: absolute;
+    top: 5.5vw;
+    left: 5vw;
+    font-size: 28px;
+    color: #7f7f7f;
+}
+
+span.lab-text {
+    position: absolute;
+    top: 5.2vw;
+    left: 15vw;
+    width: 10vw;
+    font-size: 32px;
+    text-align: right;
+}
