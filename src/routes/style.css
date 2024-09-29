@@ -80,7 +80,7 @@ span.select-min {
 #timer-hover {
     position: absolute;
     width: 70vw;
-    height: 100vw;
+    height: 100vh;
     opacity: 0%;
     transition: 1s ease;
     background-color: #FFECF9;
@@ -130,7 +130,7 @@ span.select-min {
     position: absolute;
     left: 100vw;
     width: 30vw;
-    height: 100vw;
+    height: 100vh;
     background-color: #FCECFF;
 }
 
