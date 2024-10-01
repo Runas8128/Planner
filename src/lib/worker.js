@@ -3,17 +3,22 @@ let count = 0;
 /** @type {NodeJS.Timeout | null} */
 let timer = null;
 
-self.addEventListener('message', e => {
-    if (e.data === 'run') {
+/** @type {Record<string, () => void>} */
+const handler = {
+    run() {
         timer = setInterval(() => {
             count += 10;
             self.postMessage(Math.floor(count / 1000));
         }, 10);
-    } else if (e.data === "pause") {
+    },
+    pause() {
         if (timer) clearInterval(timer);
-    } else if (e.data === "stop") {
+    },
+    stop() {
         count = 0;
         self.postMessage(0);
         if (timer) clearInterval(timer);
     }
-});
+}
+
+self.addEventListener('message', e => handler[e.data]?.());
